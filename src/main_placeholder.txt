@@ -1,0 +1,21 @@
+use std::{thread, time};
+use clearscreen::clear;
+
+mod gameoflife;
+mod gameoflifeparsing;
+
+fn main() {
+    
+    let half_second = time::Duration::from_millis(500);
+    let mut initial: [u16;16] = gameoflifeparsing::format_initial();
+    gameoflifeparsing::output_to_terminal(initial);
+    
+    loop { 
+
+        thread::sleep(half_second);
+        initial = gameoflife::evolve(initial);
+        clear().unwrap();
+        gameoflifeparsing::output_to_terminal(initial);
+    }      
+}
+
