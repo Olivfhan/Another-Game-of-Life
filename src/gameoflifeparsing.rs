@@ -13,6 +13,7 @@ pub fn format_initial() -> [u32;SIZE] {
     let mut j = MAX_SIZE;
     let mut res: [u32;SIZE] = [0;SIZE];
     let mut current: String;
+    println!("Enter the next strings or numbers for any of the predetermined grids:\npulsar (probably the most interesting given the limitations of the current version): 1\nglider_gun: 2\ncube: 3");
     while counter<(MAX_SIZE+1) { 
         current = String::new();
         io::stdin()

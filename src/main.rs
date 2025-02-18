@@ -101,7 +101,7 @@ fn main() {
         out vec4 color;
         in vec2 vertex_color;
         void main() {
-            color = vec4(vertex_color.x, vertex_color.y,1.0, 1.0);
+            color = vec4(1.0, 1.0,1.0, 1.0);
 
         }
     "#;
